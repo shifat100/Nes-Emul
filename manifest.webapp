@@ -1,0 +1,52 @@
+{
+  "version": "1.0.6",
+  "name": "Nes Emul",
+  "description": "Nes Emulator For KaiOS 2.5.x. Play *.nes Rom Files. Save & Load State. Speed Up & Down. Key Bind And Sound Features Are Available. ",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/icons/ic-56.png",
+    "112": "/icons/ic-112.png",
+    "128": "/icons/ic-128.png"
+  },
+  "fullscreen": true,
+  "developer": {
+    "name": "Shifat100",
+    "url": "http://shifat100.xtgem.com"
+  },
+  "permissions": {
+    "attention": {},
+    "device-storage:sdcard": {
+      "access": "readwrite"
+    },
+    "device-storage:sdcard1": {
+      "access": "readwrite"
+    },
+    "spatialnavigation-app-manage": {}
+  },
+  "dependencies": {
+    "ads-sdk": "1.5.8"
+  },
+  "locales": {
+    "en-US": {
+      "name": "Nes Emul",
+      "subtitle": "Nintendo (*.nes) Emulator",
+      "description": "Nes Emulator For KaiOS 2.5.x. Play *.nes Rom Files. Save & Load State. Speed Up & Down. Key Bind And Sound Features Are Available. "
+    }
+  },
+  "default_locale": "en-US",
+  "cursor": false,
+  "type": "privileged",
+  "activities": {
+    "open": {
+      "filters": {
+        "filename": {
+          "pattern": "^.*\\.(nes|NES)$",
+          "patternFlags": "i"
+        }
+      },
+      "href": "/open.html",
+      "disposition": "inline",
+      "returnValue": true
+    }
+  }
+}
